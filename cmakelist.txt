@@ -1,2 +1,15 @@
 cmake_minimum_required (VERSION 2.6)
 
+project (OpenCascadeLearning)
+
+find_package(OCCT COMPONENTS ModelingData DataExchange REQUIRED)
+
+include_directories(${OCCT INCLUDE_DIRS})
+set(LIBS ${LIBS ${})
+
+
+
+
+add_executable(OpenCascadeLearning main.cpp)
+
+

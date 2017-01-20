@@ -7,11 +7,19 @@ Standard_Integer main()
 {
     STEPControl_Reader reader;
 
-    const char *StepAddress = "/home/marc/Documents/Code/StepSample/Sample.step";
+    char StepAddress = "/home/marc/Documents/Code/StepSample/Sample.step";
     reader.ReadFile(StepAddress);
 
-    Standard_Integer NbRoots = reader.NbRootsForTransfer();
+    bool failsonly = false;
+    IFSelect_PrintCount mode = IFSelect_ListByItem;
 
+    reader.PrintCheckLoad(failsonly, mode);
+
+    TopoDS_Shape shape = reader.shape();
+
+
+
+    
     
 }
 
